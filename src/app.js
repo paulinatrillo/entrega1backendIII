@@ -3,9 +3,12 @@ import mongoose from 'mongoose'
 import mocksRouter from './routes/mocks.router.js'
 import usersRouter from './routes/users.routes.js'
 import petsRouter from './routes/pets.routes.js'
+import { setupSwagger } from './swagger.js'
 
 const app = express()
 const PORT = 8080
+
+setupSwagger(app)
 
 app.use(express.json())
 
